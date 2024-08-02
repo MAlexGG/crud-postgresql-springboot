@@ -18,13 +18,7 @@ public class Book {
     private Long isbn;
 
     //Averiguar porque no necesita un constructor
-    /* public Book(){}
-
-    public Book(String title, String author, Long isbn){
-        this.title = title;
-        this.author = author;
-        this.isbn = isbn;
-    } */
+    public Book(){}
 
     public int getId() {
         return this.id;

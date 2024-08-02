@@ -1,5 +1,7 @@
 package com.library.library.controller;
 
+import java.util.List;
+
 //import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -9,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.library.library.models.Book;
 import com.library.library.services.BookService;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+
 
 
 @RestController
@@ -27,5 +31,11 @@ public class BookController {
     public ResponseEntity<Object> addBook(@RequestBody Book book){
         return bookService.addBook(book);
     }
+
+    @GetMapping("/")
+    public List<Book> getBooks() {
+        return bookService.getBooks();
+    }
+    
 
 }
