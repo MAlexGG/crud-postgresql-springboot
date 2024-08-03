@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.library.library.models.Book;
 import com.library.library.services.BookService;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
 
 
 @RestController
@@ -37,5 +39,21 @@ public class BookController {
         return bookService.getBooks();
     }
     
+    @PutMapping("/{id}")    
+    public ResponseEntity<Object> updateBook(@PathVariable Integer id, @RequestBody Book updatedBook){
+        return bookService.updateBook(id, updatedBook);
+    }
+
+    @DeleteMapping("/{id}")  
+    public ResponseEntity<Object> deleteBook(@PathVariable Integer id){
+        return bookService.deleteBook(id);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Object> getBookById(@PathVariable Integer id){
+        return bookService.getBookById(id);
+    }
+
+
 
 }
