@@ -11,7 +11,7 @@
 This is a simple book management Spring Boot API. Only has one entity and has a PostgreSQL connection.
 
 ## Technologies
-It was developed with Spring Boot. It follow a MVC architecture, three layered, server-client style. Use a postgreSQL database.
+It was developed with Spring Boot. It follows a MVC architecture, three layered, server-client style. Use a postgreSQL database.
 
 ## Installation
 - Required Spring Boot v.3.3.4
