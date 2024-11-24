@@ -1,25 +1,24 @@
-package com.library.library.services;
+package com.library.library.service;
 
 //import java.util.HashMap;
 import java.util.List;
 //import java.util.Map;
 import java.util.Optional;
 
-//import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.library.library.models.Book;
-import com.library.library.repositories.BookRepository;
+import com.library.library.model.Book;
+import com.library.library.repository.BookRepository;
 
 @Service
 public class BookService {
 
+    @Autowired
     private final BookRepository bookRepository;
 
-    //Averiguar porque no necesita ponerle el Autowired -> creo que es porque en vez de poner el @Component y se pone directamente el @Service
-    //@Autowired
     public  BookService(BookRepository bookRepository){
         this.bookRepository =  bookRepository;
     }

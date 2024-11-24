@@ -1,4 +1,4 @@
-package com.library.library.models;
+package com.library.library.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,7 +17,6 @@ public class Book {
     private String author;
     private Long isbn;
 
-    //Averiguar porque no necesita un constructor
     public Book(){}
 
     public int getId() {
